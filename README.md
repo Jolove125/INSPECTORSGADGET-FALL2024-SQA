@@ -6,5 +6,5 @@ Team Name:
 Members:
   
 1. Alaeddin Almubayed
-2. Tory Carson
+2. Troy Carson
 3. Latasha Glover
