@@ -1,7 +1,7 @@
 # TEAMNAME-FALL2024-SQA
 COMP 6710 Group Project  
 <br/>
-Team Name:  
+Team Name: Inspectors Gadget
 <br/>
 Members:
   
