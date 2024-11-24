@@ -1,0 +1,39 @@
+# .github/workflows/fuzz.yml
+
+name: Python Fuzzing
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  fuzz:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r fuzz/requirements.txt
+
+    - name: Run Fuzzing Script
+      run: |
+        python fuzz.py
+
+    - name: Upload Fuzz Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: fuzz-report
+        path: fuzz_report.log
