@@ -30,10 +30,7 @@ jobs:
 
     - name: Run Fuzzing Script
       run: |
-        python fuzz.py
-
-    - name: Upload Fuzz Report
-      uses: actions/upload-artifact@v3
-      with:
-        name: fuzz-report
-        path: fuzz_report.log
+        python fuzz/fuzz.py
+    
+    - name: Display Fuzz Report
+      run: cat fuzz_report.log
