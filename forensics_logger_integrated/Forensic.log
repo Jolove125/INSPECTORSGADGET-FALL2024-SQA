@@ -1,0 +1,79 @@
+2024-12-02 23:06:28,590 INFO Timestamp generated: 2024-12-02 23:06:28
+2024-12-02 23:06:52,744 INFO Running FameML on directory: C:/INSPECTORSGADGET-FALL2024-SQA
+2024-12-02 23:06:52,744 INFO Processing subfolder: C:/INSPECTORSGADGET-FALL2024-SQA\.git
+2024-12-02 23:06:52,744 INFO Getting all Python files in repository: C:/INSPECTORSGADGET-FALL2024-SQA\.git
+2024-12-02 23:06:52,764 INFO Found 0 Python files.
+2024-12-02 23:06:52,764 INFO Generating CSV data for directory: C:/INSPECTORSGADGET-FALL2024-SQA\.git
+2024-12-02 23:06:52,764 INFO CSV data generated for directory: C:/INSPECTORSGADGET-FALL2024-SQA\.git
+2024-12-02 23:06:52,764 INFO Processed subfolder: C:/INSPECTORSGADGET-FALL2024-SQA\.git
+2024-12-02 23:06:52,765 INFO Processing subfolder: C:/INSPECTORSGADGET-FALL2024-SQA\.github
+2024-12-02 23:06:52,765 INFO Getting all Python files in repository: C:/INSPECTORSGADGET-FALL2024-SQA\.github
+2024-12-02 23:06:52,766 INFO Found 0 Python files.
+2024-12-02 23:06:52,766 INFO Generating CSV data for directory: C:/INSPECTORSGADGET-FALL2024-SQA\.github
+2024-12-02 23:06:52,766 INFO CSV data generated for directory: C:/INSPECTORSGADGET-FALL2024-SQA\.github
+2024-12-02 23:06:52,766 INFO Processed subfolder: C:/INSPECTORSGADGET-FALL2024-SQA\.github
+2024-12-02 23:06:52,766 INFO Processing subfolder: C:/INSPECTORSGADGET-FALL2024-SQA\.idea
+2024-12-02 23:06:52,766 INFO Getting all Python files in repository: C:/INSPECTORSGADGET-FALL2024-SQA\.idea
+2024-12-02 23:06:52,768 INFO Found 0 Python files.
+2024-12-02 23:06:52,768 INFO Generating CSV data for directory: C:/INSPECTORSGADGET-FALL2024-SQA\.idea
+2024-12-02 23:06:52,768 INFO CSV data generated for directory: C:/INSPECTORSGADGET-FALL2024-SQA\.idea
+2024-12-02 23:06:52,768 INFO Processed subfolder: C:/INSPECTORSGADGET-FALL2024-SQA\.idea
+2024-12-02 23:06:52,769 INFO Processing subfolder: C:/INSPECTORSGADGET-FALL2024-SQA\fuzz
+2024-12-02 23:06:52,769 INFO Getting all Python files in repository: C:/INSPECTORSGADGET-FALL2024-SQA\fuzz
+2024-12-02 23:06:52,769 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\fuzz\fuzz.py
+2024-12-02 23:06:52,777 INFO Found 1 Python files.
+2024-12-02 23:06:52,778 INFO Generating CSV data for directory: C:/INSPECTORSGADGET-FALL2024-SQA\fuzz
+2024-12-02 23:06:52,778 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\fuzz\fuzz.py
+2024-12-02 23:06:52,996 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\fuzz\fuzz.py: 0
+2024-12-02 23:06:52,996 INFO CSV data generated for directory: C:/INSPECTORSGADGET-FALL2024-SQA\fuzz
+2024-12-02 23:06:52,996 INFO Processed subfolder: C:/INSPECTORSGADGET-FALL2024-SQA\fuzz
+2024-12-02 23:06:52,996 INFO Processing subfolder: C:/INSPECTORSGADGET-FALL2024-SQA\Hook_Results
+2024-12-02 23:06:52,997 INFO Getting all Python files in repository: C:/INSPECTORSGADGET-FALL2024-SQA\Hook_Results
+2024-12-02 23:06:52,997 INFO Found 0 Python files.
+2024-12-02 23:06:52,997 INFO Generating CSV data for directory: C:/INSPECTORSGADGET-FALL2024-SQA\Hook_Results
+2024-12-02 23:06:52,997 INFO CSV data generated for directory: C:/INSPECTORSGADGET-FALL2024-SQA\Hook_Results
+2024-12-02 23:06:52,997 INFO Processed subfolder: C:/INSPECTORSGADGET-FALL2024-SQA\Hook_Results
+2024-12-02 23:06:52,998 INFO Processing subfolder: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana
+2024-12-02 23:06:52,998 INFO Getting all Python files in repository: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana
+2024-12-02 23:06:52,999 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\empirical\dataset.stats.py
+2024-12-02 23:06:53,009 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\empirical\frequency.py
+2024-12-02 23:06:53,014 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\empirical\report.py
+2024-12-02 23:06:53,019 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\constants.py
+2024-12-02 23:06:53,025 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\lint_engine.py
+2024-12-02 23:06:53,045 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\main.py
+2024-12-02 23:06:53,048 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\myLogger.py
+2024-12-02 23:06:53,058 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\py_parser.py
+2024-12-02 23:06:53,070 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\mining\constants.py
+2024-12-02 23:06:53,076 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\mining\git.repo.miner.py
+2024-12-02 23:06:53,089 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\mining\log.op.miner.py
+2024-12-02 23:06:53,096 INFO Parsing Python File: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\mining\mining.py
+2024-12-02 23:06:53,110 INFO Found 12 Python files.
+2024-12-02 23:06:53,110 INFO Generating CSV data for directory: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana
+2024-12-02 23:06:53,110 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\constants.py
+2024-12-02 23:06:53,206 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\constants.py: 0
+2024-12-02 23:06:53,206 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\lint_engine.py
+2024-12-02 23:06:53,787 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\lint_engine.py: 0
+2024-12-02 23:06:53,787 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\main.py
+2024-12-02 23:06:53,894 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\main.py: 0
+2024-12-02 23:06:53,894 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\myLogger.py
+2024-12-02 23:06:53,906 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\myLogger.py: 0
+2024-12-02 23:06:53,906 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\py_parser.py
+2024-12-02 23:06:54,321 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\FAME-ML\py_parser.py: 2
+2024-12-02 23:06:54,322 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\empirical\dataset.stats.py
+2024-12-02 23:06:54,500 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\empirical\dataset.stats.py: 3
+2024-12-02 23:06:54,500 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\empirical\frequency.py
+2024-12-02 23:06:54,591 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\empirical\frequency.py: 3
+2024-12-02 23:06:54,591 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\empirical\report.py
+2024-12-02 23:06:54,673 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\empirical\report.py: 2
+2024-12-02 23:06:54,674 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\mining\constants.py
+2024-12-02 23:06:54,766 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\mining\constants.py: 0
+2024-12-02 23:06:54,767 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\mining\git.repo.miner.py
+2024-12-02 23:06:54,867 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\mining\git.repo.miner.py: 3
+2024-12-02 23:06:54,867 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\mining\log.op.miner.py
+2024-12-02 23:06:55,011 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\mining\log.op.miner.py: 3
+2024-12-02 23:06:55,011 INFO Analyzing script: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\mining\mining.py
+2024-12-02 23:06:55,202 INFO Total event count for C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana\mining\mining.py: 3
+2024-12-02 23:06:55,202 INFO CSV data generated for directory: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana
+2024-12-02 23:06:55,202 INFO Processed subfolder: C:/INSPECTORSGADGET-FALL2024-SQA\MLForensics-farzana
+2024-12-02 23:06:55,215 ERROR Error saving CSV file. Check directory
+2024-12-02 23:06:55,215 INFO Timestamp generated: 2024-12-02 23:06:55
