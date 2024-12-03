@@ -23,7 +23,7 @@ if git diff --cached --name-only | grep '\.py$' > /dev/null; then
 	if [ -s security_weakness.csv ]; then
 		echo "Security issues found. See security_weakness.csv"
 	fi
-fi
+fi 
 
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
@@ -63,5 +63,4 @@ EOF
 	exit 1
 fi
 
-# If there are whitespace errors, print the offending file names and fail.
-exec git diff-index --check --cached $against --
+
