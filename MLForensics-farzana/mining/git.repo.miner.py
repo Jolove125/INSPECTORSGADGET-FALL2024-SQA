@@ -16,7 +16,7 @@ from xml.dom import minidom
 from xml.parsers.expat import ExpatError
 import time 
 import  datetime 
-import os 
+import os      
 
 def deleteRepo(dirName, type_):
     print(':::' + type_ + ':::Deleting ', dirName)
