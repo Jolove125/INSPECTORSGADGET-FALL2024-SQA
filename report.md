@@ -221,9 +221,9 @@ The workflow ran successfully and generated a report of errors detected during t
 
 **3. Key Learnings**   
 
-***Consistency:** Codacy generates a report every time a push is made; this tool runs accurately with no runtime error.
+* **Consistency:** Codacy generates a report every time a push is made; this tool runs accurately with no runtime error.
 * **Automation:** Codacy's automating code analysis reduces manual code review efforts and speeds up the development cycle.
-*  **Improved Code Quality:** Regular reports from Codacy can alert the developers to correct and improve their code from security vulnerabilities.
+* **Improved Code Quality:** Regular reports from Codacy can alert the developers to correct and improve their code from security vulnerabilities.
 
  **4. Task Completion Documentation**
  
