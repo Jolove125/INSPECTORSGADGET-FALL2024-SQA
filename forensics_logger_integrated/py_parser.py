@@ -436,5 +436,5 @@ def checkIfParsablePython( pyFile ):
 		full_tree = ast.parse( open( pyFile ).read())    
 	except (SyntaxError, UnicodeDecodeError) as err_ :
 		flag = False
-		logObj.error('A has occurred. The Python file can not be parsed')
+		logObj.error(f"The Python file can not be parsed due to a syntax/decoding error: {pyFile}")
 	return flag 	
