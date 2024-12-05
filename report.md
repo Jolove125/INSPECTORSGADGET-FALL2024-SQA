@@ -48,6 +48,8 @@ We tested the modification by making minor changes to constant.py and committing
 * **Early Detection:** By running Bandit before the code is merged, detecting and patching security issues before they make it into the codebase reduces the risk of security weaknesses.
 * **Customization:** Bandit allows for customization, enabling you to configure which checks to run and which to skip.
 
+**5. Task Completion Documentation**
+
 **`pre-commit` File**:
 
 [pre-commit.sh](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/pre-commit.sh)
@@ -118,11 +120,13 @@ and ensures that software quality is always checked on every commit.
 * **Clean up:** fuzzing ends up generating tons of logs, so implementing cleanup procedures
 helps prevent clutter and maintain a stable testing environment.
 
+**4. Task Completetion Documentation**
+
 **`Fuzz.py`:**
 
 [fuzz.py](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/fuzz/fuzz.py)
 
-**`fuzz.py` in GitHub Action:**
+**Fuzz Testing in GitHub Action:**
 
 [Python Fuzzing](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/actions/workflows/fuzz.yml) 
 
@@ -132,11 +136,12 @@ helps prevent clutter and maintain a stable testing environment.
 
 **Successfully Generated a Fuzz Workflow Screenshot:**
 
-![alt text](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/Screenshots_and_Logs/FuzzTest%20Successful%20Run.jpg?raw=true)
+![alt text](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/Screenshots_and_Logs/Fuzz_Test_%20Successful_%20Run.jpg?raw=true)
 
 **Fuzz Test Results Screenshot:**
 
 ![alt text](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/Screenshots_and_Logs/FuzzTest_Results%20Screenshot.png?raw=true)
+
 
 ### C. Integrated Forensics
 
@@ -179,6 +184,8 @@ Logging functionality was integrated across key modules and methods, ensuring co
 * **Standardized Format:** A consistent log format improves readability and facilitates integration with external monitoring tools.
 * **Performance Considerations:** Excessive logging in performance-critical paths can lead to bottlenecks, highlighting the need for selective logging.
 
+**4. Task Completion Documentation**
+
 **`Logging` Module:**
 
 [myLogger.py](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/forensics_logger_integrated/myLogger.py)
@@ -191,6 +198,7 @@ Logging functionality was integrated across key modules and methods, ensuring co
 **`Log` File:**
 
 [Forensic.log](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/forensics_logger_integrated/Forensic.log) 
+
 
 ### D. Continuous Integration with GitHub Actions
 
@@ -217,10 +225,15 @@ The workflow ran successfully and generated a report of errors detected during t
 * **Automation:** Codacy's automating code analysis reduces manual code review efforts and speeds up the development cycle.
 *  **Improved Code Quality:** Regular reports from Codacy can alert the developers to correct and improve their code from security vulnerabilities.
 
-
+ **4. Task Completion Documentation**
+ 
 **`YAML` File:**
 
 [codacy-analysis.yaml](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/.github/workflows/codacy-analysis.yaml)
+
+**Codacy CI in GitHub Action:**
+
+[Codacy Analysis CDI](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/actions/workflows/codacy-analysis.yaml)
 
 **Successfully Generated a Codacy CI Workflow Screenshot:**
 
