@@ -94,8 +94,7 @@ created during testing to maintain a clean environment.
 **2.3. GitHub Actions Integration**
 
 To automate the fuzzing process, we integrated `fuzz.py` with GitHub Actions. The workflow
-was configured to trigger on code pushes to the `main` branch, pull requests targeting main, and
-daily schedules. The workflow steps included:
+was configured to trigger on code pushes to the `main` branch, pull requests targeting main, and daily schedules. The workflow steps included:
 1. **Checkout Repository:** Cloned the repository.
 2. **Set Up Python:** Installed the specified Python version.
 3. **Install Dependencies:** Installed required packages from `requirements.txt`.
@@ -115,40 +114,48 @@ and ensures that software quality is always checked on every commit.
 * **Clean up:** fuzzing ends up generating tons of logs, so implementing cleanup procedures
 helps prevent clutter and maintain a stable testing environment.
 
+### C. Integrated Forensics
 
-**C. Integrated Forensics**
 Logging is a crucial part of modern software development, enabling developers to monitor, debug, and maintain applications efficiently. In this project, we implemented logging functionality across key Python methods to enhance transparency, traceability, and debugging capabilities.
 
-**1. Motivation for Adding Logging** 
+**1. Motivation for Adding Logging**  
+
 The integration of logging aimed to address several operational challenges and improve the overall maintainability of the FameML framework. Key motivations included:
 
-Enhanced Debugging: Logging captures detailed information about runtime errors, enabling quicker diagnosis and resolution of issues.
-Execution Traceability: With logs, developers can track how input data flows through the system and identify bottlenecks or anomalies in processing.
-Audit and Compliance: Logs provide a historical record of operations, supporting transparency and accountability.
-Error Recovery: Capturing critical errors in logs ensures they are not overlooked, facilitating smoother recovery and resilience.
+* **Enhanced Debugging:** Logging captures detailed information about runtime errors, enabling quicker diagnosis and resolution of issues.
+* **Execution Traceability:** With logs, developers can track how input data flows through the system and identify bottlenecks or anomalies in processing.
+* **Audit and Compliance:** Logs provide a historical record of operations, supporting transparency and accountability.
+* **Error Recovery:** Capturing critical errors in logs ensures they are not overlooked, facilitating smoother recovery and resilience.
 
-**2.Forensics Implementation Details**
-2.1. Logger Integration
-We used the myLogger module to centralize and standardize logging. A helper function, giveMeLoggingObject(), creates a logger object with consistent formatting and output. The logger records messages at levels such as INFO and ERROR.
+**2. Forensics Implementation Details**
 
-2.2. Areas of Integration
+**2.1. Logger Integration**
+
+We used the `myLogger` module to centralize and standardize logging. A helper function, `giveMeLoggingObject()`, creates a logger object with consistent formatting and output. The logger records messages at levels such as INFO and ERROR.
+
+**2.2. Areas of Integration**
+
 Logging functionality was integrated across key modules and methods, ensuring comprehensive coverage:
 
-giveTimeStamp(): Logs each timestamp generated, providing a consistent record of key events.
-getCSVData(dic_, dir_repo): Logs details about script analysis, including the number of events identified and aggregated into CSV data.
-getAllPythonFilesinRepo(path2dir): Logs the discovery and validation of Python files within a repository.
-runFameML(inp_dir, csv_fil): Logs the overall execution process, including subfolder processing and CSV generation.
-2.3. Key Logging Points
-Start and Completion Logs: Logs are generated at the start and end of significant operations to mark milestones.
-Input and Output Logging: Inputs, intermediate results, and outputs are logged for traceability.
-Error Handling: Errors, such as issues with saving CSV files, are logged to ensure they are visible and can be addressed promptly.
+1. `giveTimeStamp()`: Logs each timestamp generated, providing a consistent record of key events.
+2. `getCSVData(dic_, dir_repo)`: Logs details about script analysis, including the number of events identified and aggregated into CSV data.
+3. `getAllPythonFilesinRepo(path2dir)`: Logs the discovery and validation of Python files within a repository.
+4. `runFameML(inp_dir, csv_fil)`: Logs the overall execution process, including subfolder processing and CSV generation.
+5. `checkIfParsablePython(pyFile)`: Logs all Python files that were successfully parsed, as well as those that failed due to syntax or decoding errors.
+   
+**2.3. Key Logging Points**
 
-**Key Learnings**
-Log Granularity: The level of detail in logs needs to strike a balance between providing enough information and avoiding excessive verbosity.
-Standardized Format: A consistent log format improves readability and facilitates integration with external monitoring tools.
-Performance Considerations: Excessive logging in performance-critical paths can lead to bottlenecks, highlighting the need for selective logging.
+* **Start and Completion Logs:** Logs are generated at the start and end of significant operations to mark milestones.
+* **Input and Output Logging:** Inputs, intermediate results, and outputs are logged for traceability.
+* **Error Handling:** Errors, such as issues with saving CSV files, are logged to ensure they are visible and can be addressed promptly.
 
-**D. Continuous Integration with GitHub Actions**  
+**3. Key Learnings**
+
+* **Log Granularity:** The level of detail in logs needs to strike a balance between providing enough information and avoiding excessive verbosity.
+* **Standardized Format:** A consistent log format improves readability and facilitates integration with external monitoring tools.
+* **Performance Considerations:** Excessive logging in performance-critical paths can lead to bottlenecks, highlighting the need for selective logging.
+
+### D. Continuous Integration with GitHub Actions
 
 Continuous integration (CI) is a software practice that involves frequently committing code to a shared repository, detecting errors and reducing debugging time. It also simplifies merging changes, saving developers time. Continuous builds and tests ensure the code doesn't introduce errors, using code linters, security checks, and functional tests. CI requires a server for local builds and testing.  
 
@@ -165,11 +172,11 @@ In order to integrate this tool into GitHub Actions, we followed these steps:
 2. **`.github/workflow`**: Next we created a `.github/workflow` path and placed the `.yaml` file in the subfolder.
 3. **Run the Workflow:** We tested the workflow by pushing a committed file to the repository.
 
-The worflow ran successfully and generated a report of error that were detected during the scan.
+The workflow ran successfully and generated a report of error that were detected during the scan.
 
 **3. Key Learnings**   
 
-* **Runtime:** Codacy generates a report everytime a push is made this tools is run accurately with no error or failure message.
+* **Stability:** Codacy generates a report everytime a push is made this tools is run accurately with no error or failure message.
 
 ## Team Assignments
 |SQA Activity    | Team Member |
