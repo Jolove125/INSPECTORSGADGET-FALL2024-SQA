@@ -1,9 +1,9 @@
 # PROJECT REPORT
 ## Objective
-The main goal of this project is to build a GitHub repository and utilize the tools and knowledge gained from the workshop activities in class.
+The main goal of this project is to build a GitHub repository. We will then analyze and perform various testing methods in this repository utilizing the tools and knowledge gained from the workshop activities in class.
 
 ## Introduction
-The first step was to unpack the provided zip compressed folder `MLForensics.zip` and upload it to our GitHub repository titled INSPECTORSGADGET-FALL2024-SQA. Then, each team member was tasked with completing the following software quality assurance activities:  
+The first step was to unpack the provided compressed zip folder `MLForensics.zip` and upload it to our GitHub repository titled INSPECTORSGADGET-FALL2024-SQA. Then, each team member was tasked with completing the following software quality assurance activities:  
 * Create a Git Hook that will run and report all security weaknesses in the project in a CSV file whenever a Python file is changed and committed.  
 * Create a `fuzz.py` file that will automatically fuzz 5 Python methods. Any bug detection should be automatically executed and reported from GitHub Actions.  
 * Integrate forensics into the repository by modifying 5 Python methods.  
@@ -42,19 +42,23 @@ To create a git hook that will run whenever an altered Python file is committed.
 
 We tested the modification by making minor changes to constant.py and committing it. The Bandit tools were executed every time a Python file was changed and was going to be committed. This tool scans all Python files in the repository. A CSV file titled `security-weakness.csv` is generated and reports any security weaknesses detected from the scan. A notification shows us that vulnerabilities were detected and that the result was located in the file named `security-weakness.csv`.
 
+**4. Key Learnings**
+* **Automated Security Checks:** To guarantee that vulnerabilities are discovered early, Bandit assists in automating the process of finding typical security concerns in Python programming.
+* **Consistency:** Including Bandit in pre-commit connfirms that security checks are executed consistently to each commit.
+* **Early Detection:** By running Bandit before the code is merged, detecting and patching security issues before they make it into the codebase reduces the risk of security weaknesses.
+* **Customization:** Bandit allows for customization, enabling you to configure which checks to run and which to skip.
+
+**`pre-commit` File**:
+
+[pre-commit.sh](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/pre-commit.sh)
+
 **`pre-commit` Execution Screenshot:** 
 
 ![alt text](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/Hook_Results/Bandit_SA%20Screenshot.jpg?raw=true) 
 
-**Vulnerabilites Detection Results:**  
+**Vulnerabilites Detection Results in CSV file:**  
 
 [security-weakness.csv](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/Hook_Results/security_weakness.csv)
-
-**4. Key Learnings**
-
-* **Different Static Analysis Tools:** Research the different static analysis tools attributes that can be utilized in our pre-commit.
-* **Git Command and GitHub:** Research and learning more about git commands and GitHub
-* **Workshops:** Learning that the activities introduced to us in `Workshop 6: Security Weakness Identification with Automation` could be applied/combined with the lab activities we executed in `Workshop 8: Event-driven Static Analysis with Git Hooks`.
 
 ### B. Automated Fuzz Testing for Python Methods  
 Fuzz testing, or [fuzzing](https://en.wikipedia.org/wiki/Fuzzing), is an automated technique that feeds random or unexpected inputs to
@@ -75,7 +79,7 @@ tree.
 
 **2. Implementation of `fuzz.py`**
    
-**2.1 Fuzzing Strategy**  
+**2.1. Fuzzing Strategy**  
 For each target method, we generated a wide range of inputs, including valid data, invalid types,
 boundary cases, and malformed structures so we can simulate real-world scenarios and
 uncover unexpected behaviors or crashes.
@@ -113,6 +117,26 @@ uncovering hidden functionalities.
 and ensures that software quality is always checked on every commit.
 * **Clean up:** fuzzing ends up generating tons of logs, so implementing cleanup procedures
 helps prevent clutter and maintain a stable testing environment.
+
+**`Fuzz.py`:**
+
+[fuzz.py](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/fuzz/fuzz.py)
+
+**`fuzz.py` in GitHub Action:**
+
+[Python Fuzzing](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/actions/workflows/fuzz.yml) 
+
+**`YAML` File:**
+
+[fuzz.yml](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/.github/workflows/fuzz.yml)
+
+**Successfully Generated a Fuzz Workflow Screenshot:**
+
+![alt text](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/Screenshots_and_Logs/FuzzTest%20Successful%20Run.jpg?raw=true)
+
+**Fuzz Test Results Screenshot:**
+
+![alt text](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/Screenshots_and_Logs/FuzzTest_Results%20Screenshot.png?raw=true)
 
 ### C. Integrated Forensics
 
@@ -155,28 +179,56 @@ Logging functionality was integrated across key modules and methods, ensuring co
 * **Standardized Format:** A consistent log format improves readability and facilitates integration with external monitoring tools.
 * **Performance Considerations:** Excessive logging in performance-critical paths can lead to bottlenecks, highlighting the need for selective logging.
 
+**`Logging` Module:**
+
+[myLogger.py](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/forensics_logger_integrated/myLogger.py)
+
+**Forensic Integrated Python Methods:**
+
+1. [main.py](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/forensics_logger_integrated/main.py)
+2. [py_parser.py](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/forensics_logger_integrated/py_parser.py)
+
+**`Log` File:**
+
+[Forensic.log](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/forensics_logger_integrated/Forensic.log) 
+
 ### D. Continuous Integration with GitHub Actions
 
-Continuous integration (CI) is a software practice that involves frequently committing code to a shared repository, detecting errors and reducing debugging time. It also simplifies merging changes, saving developers time. Continuous builds and tests ensure the code doesn't introduce errors, using code linters, security checks, and functional tests. CI requires a server for local builds and testing.  
+Continuous integration (CI) is a software practice that involves frequently committing code to a shared repository, detecting errors, and reducing debugging time. It also simplifies merging changes, saving developers time. Continuous builds and tests ensure the code doesn't introduce errors, using code linters, security checks, and functional tests. CI requires a server for local builds and testing.  
 
-GitHub Actions provides CI workflows for building code in one's repository and running tests. These workflows can be configured to run when a GitHub event occurs, on a set schedule, or when an external event occurs. GitHub runs CI tests and provides results in pull requests, allowing the user to review changes or merge them. When setting up CI in a repository, GitHub analyzes the code and recommends workflows based on the language and framework. GitHub Actions can also be used to create workflows across the entire software development life cycle.
+GitHub Actions provides CI workflows for building code in one's repository and running tests. These workflows can be configured to run when a GitHub event occurs, on a set schedule, or when an external event occurs. GitHub runs CI tests and provides results in pull requests, allowing users to review or merge changes. When setting up CI in a repository, GitHub analyzes the code and recommends workflows based on the language and framework. GitHub Actions can also create workflows across the entire software development life cycle.
 
 **1. Tool Selection**
    
-For continuous integration with GitHub Actions, we will need a tool that automatically runs when a push or pull is committed. It was decided to use the Codacy Analysis CLI tool as a continuous integration tool for this project. Codacy analyzes over 40 different programming languages, including Python. That suits this project because Python is the only high-level programming language utilized in this repository. 
+We will need a tool that automatically runs when a push or pull is committed for continuous integration with GitHub Actions. It was decided that the Codacy Analysis CLI tool would be used as a continuous integration tool for this project. Codacy analyzes over 40 different programming languages, including Python. That suits this project because Python is this repository's only high-level programming language.
 
 **2. Integration of Codacy Analysis CLI in GitHub Actions**
 
-In order to integrate this tool into GitHub Actions, we followed these steps:
-1. **Create `YAML` file:** Per the developers' [instructions](https://github.com/marketplace/actions/codacy-analysis-cli), a `.yaml` file tile codacy-analysisas as created containing the default setting configuration that was given. 
+To integrate this tool into GitHub Actions, we followed these steps:
+1. **Create a `YAML` file:** Per the developers' [instructions](https://github.com/marketplace/actions/codacy-analysis-cli), a `.yaml` file named codacy-analysis was created containing the provided default setting configuration.
 2. **`.github/workflow`**: Next we created a `.github/workflow` path and placed the `.yaml` file in the subfolder.
 3. **Run the Workflow:** We tested the workflow by pushing a committed file to the repository.
-
-The workflow ran successfully and generated a report of error that were detected during the scan.
+   
+The workflow ran successfully and generated a report of errors detected during the scan.
 
 **3. Key Learnings**   
 
-* **Stability:** Codacy generates a report everytime a push is made this tools is run accurately with no error or failure message.
+***Consistency:** Codacy generates a report every time a push is made; this tool runs accurately with no runtime error.
+* **Automation:** Codacy's automating code analysis reduces manual code review efforts and speeds up the development cycle.
+*  **Improved Code Quality:** Regular reports from Codacy can alert the developers to correct and improve their code from security vulnerabilities.
+
+
+**`YAML` File:**
+
+[codacy-analysis.yaml](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/.github/workflows/codacy-analysis.yaml)
+
+**Successfully Generated a Codacy CI Workflow Screenshot:**
+
+![alt text](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/Screenshots_and_Logs/Codacy%20CI%20Successful%20Run%20.jpg?raw=true)
+
+**Codacy CI Testing Analysis Report:**
+
+![alt text](https://github.com/Jolove125/INSPECTORSGADGET-FALL2024-SQA/blob/main/Screenshots_and_Logs/Codacy%20Results%20Screenshot%20.jpg)
 
 ## Team Assignments
 |SQA Activity    | Team Member |
